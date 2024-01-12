@@ -1,38 +1,220 @@
-.App {
+.sc_dynamic_table .sc_btn {
+  border-radius: 4px;
+  border: 1px solid #ABB1BA;
+  background: #FFF;
+  box-shadow: 0px 1px 0px 0px rgba(22, 29, 37, 0.05);
+  color: #212125;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.1px;
+  padding: 7px 16px;
+  cursor: pointer;
+}
+.sc_dynamic_table .sc_dynamic_table__container {
+  padding: 20px;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_footer {
+  margin-top: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-.App-link {
-  color: #61dafb;
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  max-width: calc(100% - 100px);
+  width: 100%;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
 }
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p {
+  padding: 0 15px;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 6px;
+  width: 95px;
+  text-align: center;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p.active {
+  border-bottom: 2px solid #008060;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p.active input {
+  color: #008060;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p.active span {
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p input {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  box-sizing: border-box;
+  width: 80px;
+  padding: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 0px 0px rgba(22, 29, 37, 0.3) inset;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p input:focus-visible {
+  outline: none;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p:hover .icon {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s linear;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p .icon {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 2px;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__tab_wrapper .sc_dynamic_table__tabs p .icon svg {
+  width: 19px;
+  height: 20px;
+  margin-left: 5px;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table__header .sc_dynamic_table__column_btn {
+  margin-top: 20px;
+  text-align: right;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  white-space: nowrap;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row.last .sc_dynamic_table_data.last {
+  background-color: #F0F5FD;
+  text-align: center;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_header {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-top: 1px solid #E3E3E3;
+  background: #F1F2F4;
+  padding: 12px 0;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_header.last {
+  color: #616A75;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_header.last span {
+  cursor: pointer;
+  line-height: 1;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_header.last span:first-child {
+  margin-right: 10px;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_header.last span svg {
+  width: 26px;
+  border: 1px solid #ccc;
+  height: 26px;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_header input {
+  padding: 8px 25px;
+  border-radius: 4px;
+  border: 1px solid #E3E3E3;
+  /* Button Inside Shadow */
+  box-shadow: 0px 0px 0px 0px rgba(22, 29, 37, 0.3) inset;
+  color: #616A75;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 95px;
+  text-align: center;
+  background: #F1F2F4;
+  box-sizing: border-box;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_header input:focus-visible {
+  outline: 2px solid #007bff;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_data {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 12px 0;
+  border-top: 1px solid #E3E3E3;
+  text-align: center;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_data.last {
+  background-color: #F0F5FD;
+  text-align: center;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_data.last span {
+  cursor: pointer;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_data.last span:first-child {
+  margin-right: 10px;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_data.last span svg {
+  width: 26px;
+  border: 1px solid #ccc;
+  height: 26px;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_data input {
+  width: 66px;
+  height: 34px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #E3E3E3;
+  /* Button Inside Shadow */
+  box-shadow: 0px 0px 0px 0px rgba(22, 29, 37, 0.3) inset;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tbody .sc_dynamic_table_row .sc_dynamic_table_data input:focus-visible {
+  outline: 2px solid #007bff;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tfoot .sc_dynamic_table_row.last .sc_dynamic_table_data.last {
+  padding: 12px 0;
+  background-color: #F0F5FD !important;
+  position: sticky;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tfoot .sc_dynamic_table_row.last .sc_dynamic_table_data.last span {
+  cursor: pointer;
+  cursor: pointer;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tfoot .sc_dynamic_table_row.last .sc_dynamic_table_data.last span:first-child {
+  margin-right: 10px;
+}
+.sc_dynamic_table .sc_dynamic_table__container .sc_dynamic_table_main tfoot .sc_dynamic_table_row.last .sc_dynamic_table_data.last span svg {
+  width: 26px;
+  border: 1px solid #ccc;
+  height: 26px;
+}/*# sourceMappingURL=App.css.map */
