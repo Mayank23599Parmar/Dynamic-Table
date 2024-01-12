@@ -25,9 +25,9 @@ const App = () => {
   const [tableData, setTableData] = useState(initialTableData);
   const handleCellChange = (rowIndex, colIndex, value) => {
     const title = tableData[currentTabIndex].title
-    const content  = [...tableData[currentTabIndex].content];
+    const content = [...tableData[currentTabIndex].content];
     content[rowIndex][colIndex] = value;
-    const data={title, content}
+    const data = { title, content }
     updateTableDataHandler(data);
   };
   const deleteTab = (index) => {
@@ -38,12 +38,12 @@ const App = () => {
     } else {
       console.log("show Tost message")
     }
-    if(currentTabIndex === 0){
+    if (currentTabIndex === 0) {
       setCurrentTabIndex(currentTabIndex)
-    }else{
-      setCurrentTabIndex(currentTabIndex -1)
+    } else {
+      setCurrentTabIndex(currentTabIndex - 1)
     }
-  
+
   }
   // Tab input onchange handler
   const handleTabTitleChange = (e, index) => {
@@ -140,7 +140,7 @@ const App = () => {
     })
     setCurrentTabIndex(tableData.length)
   }
-  console.log(tableData,'tableData')
+  console.log(tableData, 'tableData')
   const lastRow = tableData[currentTabIndex].content[0]
   return (
     <div className="sc_dynamic_table">
